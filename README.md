@@ -25,13 +25,13 @@ After completing those steps you should reboot and run your raspberry pi.
 In this part we will use gr-802-11 — a GNU Radio based OFDM transceiver for IEEE 802.11a/g/p networks — can be used with the LimeSDR Usb to observe and record Wi-Fi signals.  
 The Wi-Fi signal is captured to a file which can then subsequently be read by the popular network protocol analyser, Wireshark. The benefits of using an SDR with Wireshark instead of 802.11 hardware include that you don’t need to worry about whether your WLAN adapter is filtering packets, and of course you’re free to modify the physical layer since it’s software.  
 The instructions to download the gr-ieee802-11 are available in https://github.com/bastibl/gr-ieee802-11.  
-After correctly following the instructions by installing all the necessary packages and ressources, you should lanch GNU radio companion and open the wifi_rx.grc which is a flowgraph that allow us to capture wifi packets using several sources ( osmocom source, limeSDR , UHD ...). Since we are using LimeSDR you should replace the UHD source with the LimeSDR source (RX) which is available in the GNU radio companion block and to do the following changes :  
+After correctly following the instructions by installing all the necessary packages and ressources, you should lanch GNU radio companion and open the __wifi_rx.grc__ which is a flowgraph that allow us to capture wifi packets using several sources ( osmocom source, limeSDR , UHD ...). Since we are using LimeSDR you should replace the UHD source with the __LimeSDR source (RX)__ which is available in the GNU radio companion block and to do the following changes :  
 * put "freq" as frequency and "samp_rate" as Sample rate 
 * Set the LNA path to auto for the channel A and select it 
 * modify the default value of freq in the QT GUI Chooser and set it to 2.412G instead of 5G 
 * Enable the wireshark blocks 
 
-You can fin the modified flowgraph in the repo as Wifi_rx.grc.  
-To start the wifi packets capture, you have to connect the limeSDR usb to the raspberry PI and then execute a script "rx_demo.sh" wich is available in the gr-ieee802.11 apps file  which will lanch the wifi_rx and open a wireshark window at the same time. You should tune the gnu radio companion to capture packets in a particular frequency channel or sample rate, constelations will appear if packets are captured.
+You can fin the modified flowgraph in the repo as __Wifi_rx.grc__.  
+To start the wifi packets capture, you have to connect the limeSDR usb to the raspberry PI and then execute a script __rx_demo.sh__ wich is available in the gr-ieee802.11 apps file  which will lanch the wifi_rx and open a wireshark window at the same time. You should tune the gnu radio companion to capture packets in a particular frequency channel or sample rate, constelations will appear if packets are captured.
 
 
