@@ -32,6 +32,6 @@ After correctly following the instructions by installing all the necessary packa
 * Enable the wireshark blocks 
 
 You can fin the modified flowgraph in the repo as Wifi_rx.grc.  
-To start the wifi packets capture, you have to connect the limeSDR usb to the raspberry PI and then execute a script wich is available in the gr-ieee802.11 file  which will lanch the wifi_rx and open a wireshark window at the same time. You should tune the gnu radio companion to capture packets in a particular frequency channel or sample rate, constelations will appear if packets are captured.
+To start the wifi packets capture, you have to connect the limeSDR usb to the raspberry PI and then execute a script "rx_demo.sh" wich is available in the gr-ieee802.11 apps file  which will lanch the wifi_rx and open a wireshark window at the same time. You should tune the gnu radio companion to capture packets in a particular frequency channel or sample rate, constelations will appear if packets are captured.
 
 
